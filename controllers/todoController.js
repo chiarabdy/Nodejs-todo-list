@@ -1,6 +1,7 @@
+var data = [{item: 'get milk'}, {item: 'walk dog'}, {item: 'kick some coding'}]
 module.exports = (app)=>{
     app.get('/todo',(req,res)=>{
-        res.render('todo');
+        res.render('todo',{todos: data});
     })    
     app.post('/todo',(req,res)=>{
     
